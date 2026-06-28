@@ -65,5 +65,5 @@ def predict():
         return jsonify({"error": str(e)}), 400
 
 if __name__ == "__main__":
-    print("🌊 Running at http://localhost:5000")
-    app.run(debug=True, port=5000)
+    print("🌊 Running at http://localhost:x")
+    app.run(debug=True, port=x)
