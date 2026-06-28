@@ -25,7 +25,7 @@ def predict_water_quality(params):
         "\n".join("  - " + k + ": " + str(v) for k, v in params.items()) +
         '\n\nReply ONLY with JSON: {"classification":"<class>","confidence":"<High/Medium/Low>","reason":"<one sentence>","probabilities":{"Highly Suitable":0,"Suitable":0,"Restricted / Stressed":0,"Unsuitable / Critical":0}}')
     response = client.chat.completions.create(
-        model="nvidia/nemotron-3-ultra-550b-a55b",
+        model=x,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.1,
         max_tokens=1024,
